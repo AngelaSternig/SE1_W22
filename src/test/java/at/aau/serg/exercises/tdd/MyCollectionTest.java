@@ -52,10 +52,10 @@ public class MyCollectionTest {
         c1.add("3");
 
         c1.empty();
-        assertEquals(3, c1.size());
+        assertEquals(0, c1.size());
         assertNotEquals(c, c1);
 
         c.empty();
-        assertNotEquals(c,c1);
+        assertEquals(0, c.size());
     }
 }
