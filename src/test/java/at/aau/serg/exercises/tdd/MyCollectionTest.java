@@ -42,6 +42,14 @@ public class MyCollectionTest {
         c.remove("2");
 
         assertEquals(1, c.size());
+
+        MyCollection c2 = new MyCollection(2);
+        c2.add("3");
+        c2.add("4");
+        Assert.assertThrows(IllegalArgumentException.class, () ->
+                new MyCollection(2).remove("2"));
+        Assert.assertThrows(IllegalArgumentException.class, () ->
+                c2.remove("2"));
     }
 
     @Test
