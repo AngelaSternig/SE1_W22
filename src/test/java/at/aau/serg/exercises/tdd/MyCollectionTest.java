@@ -43,4 +43,19 @@ public class MyCollectionTest {
 
         assertEquals(1, c.size());
     }
+
+    @Test
+    public void testEmpty(){
+        MyCollection c1 = new MyCollection(5);
+        c1.add("1");
+        c1.add("2");
+        c1.add("3");
+
+        c1.empty();
+        assertEquals(3, c1.size());
+        assertNotEquals(c, c1);
+
+        c.empty();
+        assertNotEquals(c,c1);
+    }
 }
